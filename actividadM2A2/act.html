@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Jugador</title>
+</head>
+<body>
+    <form action="#" method="post">
+        <table border="1" cellpadding="5">
+            <tr>
+                <td><label for="nombre">Nombre del jugador:</label></td>
+                <td><input type="text" id="nombre" name="nombre" required minlength="3" maxlength="40"></td>
+            </tr>
+            <tr>
+                <td><label for="correo">Correo:</label></td>
+                <td><input type="email" id="correo" name="correo" required placeholder="ejemplo@correo.com"></td>
+            </tr>
+            <tr>
+                <td><label for="edad">Edad:</label></td>
+                <td><input type="number" id="edad" name="edad" min="10" max="99" required></td>
+            </tr>
+            <tr>
+                <td><label for="nickname">Nickname:</label></td>
+                <td><input type="text" id="nickname" name="nickname" required pattern="[A-Za-z0-9_]{3,15}" 
+                   title="Solo letras, números y guiones bajos (3-15 caracteres)"></td>
+            </tr>
+            <tr>
+                <td>Categoría:</td>
+                <td>
+                    <input type="radio" id="principiante" name="categoria" value="principiante" required>
+                    <label for="principiante">Principiante</label>
+                    <input type="radio" id="intermedio" name="categoria" value="intermedio">
+                    <label for="intermedio">Intermedio</label>
+                    <input type="radio" id="experto" name="categoria" value="experto">
+                    <label for="experto">Experto</label>
+                </td>
+            </tr>
+            <tr>
+                <td>Juegos favoritos:</td>
+                <td>
+                    <input type="checkbox" id="fifa" name="juegos" value="FIFA">
+                    <label for="fifa">FIFA</label>
+                    <input type="checkbox" id="lol" name="juegos" value="LoL">
+                    <label for="lol">LoL</label>
+                    <input type="checkbox" id="minecraft" name="juegos" value="Minecraft">
+                    <label for="minecraft">Minecraft</label>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="fecha">Fecha inscripción:</label></td>
+                <td><input type="date" id="fecha" name="fecha" required></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Restablecer">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
